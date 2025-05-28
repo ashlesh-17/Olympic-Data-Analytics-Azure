@@ -1,41 +1,54 @@
-🏅 #Olympic Data Analytics using Microsoft Azure
-A complete data engineering project that builds an end-to-end ETL pipeline for analyzing Olympic data using Microsoft Azure services.
+# 🏅 Olympic Data Analytics using Microsoft Azure
 
+This project demonstrates a complete end-to-end **ETL pipeline** for analyzing Olympic data using various services from the **Microsoft Azure ecosystem**. It includes data ingestion, processing, storage, querying, and visualization.
 
-🔧 #Tools & Services Used
+---
 
-Azure Data Lake Storage – Data storage
-Azure Data Factory – Data ingestion
-Azure Databricks (PySpark) – Data processing & transformation
-Azure Synapse Analytics – Data warehousing & SQL queries
-Power BI – Data visualization
-Azure AD App Registration – Secure access via mounted storage
+## 🔧 Tools & Services Used
 
+- **Azure Data Lake Storage** – For storing raw and transformed data
+- **Azure Data Factory** – For ingesting CSV files into the data lake
+- **Azure Databricks (PySpark)** – For data processing and transformation
+- **Azure Synapse Analytics** – For querying data using SQL
+- **Power BI** – For data visualization and dashboarding
+- **Azure Active Directory App Registration** – For secure mounting and authentication
 
+---
 
+## 🔄 Workflow Summary
 
-🔄 #Workflow Summary
+1. Ingested raw `athletes.csv` using Azure Data Factory.
+2. Mounted ADLS Gen2 in Azure Databricks using app credentials.
+3. Processed and cleaned data using **PySpark** in Databricks notebooks.
+4. Saved transformed data back to ADLS.
+5. Imported transformed data into **Azure Synapse Analytics** as tables.
+6. Executed SQL queries to generate insights (e.g., total medals, athlete counts).
+7. Connected Power BI to Synapse to create interactive visual dashboards.
 
-Ingested raw athletes.csv using Azure Data Factory
-Mounted ADLS in Databricks and performed transformations using Spark
-Saved transformed data back to ADLS
-Loaded into Synapse Lake Database for SQL analysis
-Built Power BI dashboards using Synapse data
+---
 
+## 📊 Sample Analyses
 
+- Top countries by number of gold medals
+- Total number of athletes by country
+- Average entries by gender per discipline
 
+---
 
-📊 #Sample Analyses
+## 📈 Highlights
 
-Top countries by gold medals
-Total athletes by country
-Average gender entries by discipline
+- Built a **scalable and modular ETL pipeline** using cloud-native Azure services.
+- Performed real-time transformations using Spark in Azure Databricks.
+- Delivered actionable insights through SQL queries and Power BI reports.
 
+---
 
+## 🚀 Future Enhancements
 
+- Automate end-to-end pipeline and dashboard refresh
+- Integrate real-time streaming data (e.g., with Azure Event Hubs)
+- Add CI/CD for notebooks and deployment
 
-📈 #Highlights
+---
 
-Built scalable ETL pipeline using Azure services
-Automated data processing with PySpark
-Visualized insights with Power BI dashboards
+Feel free to explore the notebooks and SQL queries included in this repo to learn more!
